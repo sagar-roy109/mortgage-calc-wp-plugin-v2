@@ -54,7 +54,59 @@ function morgage_custom_assets(){
         "[mortgage_bootstrap, mortgage_slider_css, mortgage_style]"
     );
 
+    // Jquery
 
+    
+    wp_enqueue_script(
+        "mortgage-jquery",
+        plugins_url('assets/js/jquery-3.6.0.js', __FILE__),
+        "",
+        null,
+        true
+        
+    );
+
+    //custom coded jquery
+
+    wp_enqueue_script(
+        "mortgage-calc-custom-jquery",
+        plugins_url('mortgage-jquery.js', __FILE__),
+        "mortgage-jquery",
+        null,
+        true
+        
+    );
+
+    //Slider js
+
+    wp_enqueue_script(
+        "mortgage-slider-js",
+        plugins_url('assets/js/rSlider.min.js', __FILE__),
+        "",
+        null,
+        true
+        
+    );
+
+    // Calculator JS
+
+    wp_enqueue_script(
+        "mortgage-calculator",
+        plugins_url('calculator.js', __FILE__), 
+        "mortgage-slider-js",
+        null,
+        true
+        
+    );
+
+    wp_enqueue_script(
+        "mortgage-calc-js",
+        plugins_url('mortgage.js', __FILE__), 
+        "[mortgage-jquery,mortgage-calc-custom-jquery]",
+        null,
+        true
+        
+    );
 }
 
 
@@ -143,64 +195,6 @@ endif;
 add_shortcode('buy_to_let', "mortgage_buy_to_let_shortcode");
 
 function mortgage_buy_to_let_shortcode(){
-
-
-        // Jquery
-
-    
-        wp_enqueue_script(
-            "mortgage-jquery",
-            plugins_url('assets/js/jquery-3.6.0.js', __FILE__),
-            "",
-            null,
-            true
-            
-        );
-    
-        //custom coded jquery
-    
-        wp_enqueue_script(
-            "mortgage-calc-custom-jquery",
-            plugins_url('mortgage-jquery.js', __FILE__),
-            "mortgage-jquery",
-            null,
-            true
-            
-        );
-    
-        //Slider js
-    
-        wp_enqueue_script(
-            "mortgage-slider-js",
-            plugins_url('assets/js/rSlider.min.js', __FILE__),
-            "",
-            null,
-            true
-            
-        );
-    
-        // Calculator JS
-    
-        wp_enqueue_script(
-            "mortgage-calculator",
-            plugins_url('calculator.js', __FILE__), 
-            "mortgage-slider-js",
-            null,
-            true
-            
-        );
-    
-        wp_enqueue_script(
-            "mortgage-calc-js",
-            plugins_url('mortgage.js', __FILE__), 
-            "[mortgage-jquery,mortgage-calc-custom-jquery]",
-            null,
-            true
-            
-        );
-
-
-
     ob_start();
     include_once PLUGIN_DIR_PATH."/tamplets/buy-to-let.php";
     return ob_get_clean();
@@ -209,63 +203,6 @@ function mortgage_buy_to_let_shortcode(){
 add_shortcode('mortgage', "mortgage_calc_shortcode");
 
 function mortgage_calc_shortcode(){
-
-
-        // Jquery
-
-    
-        wp_enqueue_script(
-            "mortgage-jquery",
-            plugins_url('assets/js/jquery-3.6.0.js', __FILE__),
-            "",
-            null,
-            true
-            
-        );
-    
-        //custom coded jquery
-    
-        wp_enqueue_script(
-            "mortgage-calc-custom-jquery",
-            plugins_url('mortgage-jquery.js', __FILE__),
-            "mortgage-jquery",
-            null,
-            true
-            
-        );
-    
-        //Slider js
-    
-        wp_enqueue_script(
-            "mortgage-slider-js",
-            plugins_url('assets/js/rSlider.min.js', __FILE__),
-            "",
-            null,
-            true
-            
-        );
-    
-        // Calculator JS
-    
-        wp_enqueue_script(
-            "mortgage-calculator",
-            plugins_url('calculator.js', __FILE__), 
-            "mortgage-slider-js",
-            null,
-            true
-            
-        );
-    
-        wp_enqueue_script(
-            "mortgage-calc-js",
-            plugins_url('mortgage.js', __FILE__), 
-            "[mortgage-jquery,mortgage-calc-custom-jquery]",
-            null,
-            true
-            
-        );
-
-
     ob_start();
     include_once PLUGIN_DIR_PATH."/tamplets/mortgage.php";
     return ob_get_clean();
