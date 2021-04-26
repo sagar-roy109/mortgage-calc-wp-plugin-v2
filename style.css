@@ -1,0 +1,239 @@
+/**  Common Reset **/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.calc-wrapper{
+    margin-top:  25px;
+    border: 1px solid #EBEBEC;
+    padding: 50px;
+    border-radius: 15px;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
+}
+
+
+.mortgage-cost-calc h5,
+.borrow-calc h5{
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    line-height: 36px;
+}
+
+.mortgage-cost-calc label,
+.borrow-calc label {
+    margin-top: 25px;
+}
+
+.rs-container.rs-noscale{
+    margin-left: 15px  !important;
+}
+
+.mortgage-cost-calc,p
+.borrow-calc p {
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.interest-output h2,
+.borrow-output h2 {
+    font-size: 64px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 72px;
+}
+
+
+
+/********* MORTGAGE CALC STARTED **********/
+
+
+
+.mortgage-calc {
+    padding: 50px 0;
+}
+
+.mortgage-calc .calc-left-side{
+    padding: 20px;
+box-sizing: border-box;
+border-radius: 10px;
+border: 1px solid #949AB6;
+}
+.mortgage-calc .calc-left-side h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    color: #252551;
+}
+
+
+.mortgage-calc .label{
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 24px;
+    color: #292E60;
+}
+
+.mortgage-calc .tool-tip span{
+    font-size: 16px;
+    display: inline-block;
+    float: right;
+    font-style: italic;
+    border: 1px solid #949AB6;
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    font-weight: bold;
+    line-height: 23px;
+    padding-right: 2px;
+    cursor: pointer;
+}
+
+.mortgage-calc .tool-tip-content{
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 24px;
+    color: #292E60;
+    border: 1px solid #949AB6;
+    padding: 10px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    position: absolute;
+    width: 80%;
+    top: 30px;
+    right: 0;
+    background-color: #ffff;
+    display: none;
+    z-index: 999;
+}
+
+.mortgage-calc .tool-tip-container{
+    position: relative;
+    margin-top: 50px;
+
+}
+
+.mortgage-calc .mortgage-type-selector,
+.mortgage-calc .income-input,
+.mortgage-calc .deposit-input,
+.mortgage-calc .rate-type-selector,
+.mortgage-calc .period-selector,
+.mortgage-calc .year-input{
+    margin-top: 10px;
+}
+
+
+
+.mortgage-calc .button-holder {
+    border: 1px solid #949492;
+    border-radius: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.mortgage-calc .button-holder label{
+    box-sizing: border-box;
+    padding: 14px 8px 14px 7px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+   
+}
+
+.mortgage-calc .period-selector label{
+    padding: 14px 24px 14px 6px;
+}
+
+.mortgage-calc .rate-type-selector label{
+    padding: 14px 48px 14px 14px;
+}
+
+.mortgage-calc .form-check-input
+ {
+    margin-top: 16px;
+    margin-left: 12px;
+}
+
+.mortgage-calc .form-check-inline{
+    margin-right: 0px;
+}
+
+.mortgage-calc .radio-active{
+    background: #252551;
+    color: #fff;
+    border-color: #204d74;
+    
+}
+
+.mortgage-calc input[type="radio"]:checked{
+    background: black;
+    border: 3px solid white;
+}
+
+.mortgage-calc .button-holder.mr{
+    margin-right: 10px;;
+}
+
+.mortgage-calc input{
+    border: 1px solid #949492;
+}
+
+
+
+/*** MORTGAGE CALC OUTPUT ***/
+
+.mortgage-calc .mortgage-out-put{
+    background: #FFFBFB;
+    color: #252551;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 50px 0;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+}
+
+.mortgage-calc .mortgage-out-put h3{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+}
+.mortgage-calc .mortgage-out-put h1{
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #DE2367;
+}
+.mortgage-calc .total-amount-des,
+.mortgage-calc .total-amout {
+    font-size: 22px;
+    line-height: 26px;
+    color: #252551;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 350px;
+    margin: auto;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.mortgage-calc .total-amout{
+    max-width: 100%;
+    margin-bottom: 60px;
+    margin-top: 10px;
+
+}
+
